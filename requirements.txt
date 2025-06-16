@@ -1,6 +1,9 @@
+setuptools>=42
+wheel
+build
 flask==2.3.3
 flask-cors==4.0.0
 pandas==2.1.0
 torch==2.0.1
 transformers==4.33.2
-reportlab==4.0.4 
+reportlab==4.0.4
