@@ -1,6 +1,7 @@
-setuptools>=42
+pip>=23.1
+setuptools>=65.0
 wheel
-build
+build>=0.10
 flask==2.3.3
 flask-cors==4.0.0
 pandas==2.1.0
