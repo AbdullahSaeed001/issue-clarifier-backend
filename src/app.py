@@ -1,6 +1,8 @@
 """
 Main application entry point for the Issue Clarifier.
 """
+import os
+
 
 import time
 import json
@@ -170,8 +172,11 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(
-        debug=FLASK_CONFIG["debug"],
-        port=FLASK_CONFIG["port"]
-    )
+  #  app.run(
+  #     debug=FLASK_CONFIG["debug"],
+  #      port=FLASK_CONFIG["port"]
+  #  )
+
+port = int(os.environ.get("PORT", FLASK_CONFIG.get("port", 5000)))
+app.run(host="0.0.0.0", debug=FLASK_CONFIG["debug"], port=port)
     
